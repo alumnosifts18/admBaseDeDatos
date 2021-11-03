@@ -1,0 +1,8 @@
+<?php 
+
+$text= "Alumno de IFTS 18: ";
+$text2= " Anderson Ocaña";
+
+print $text.$text2;
+
+?>
