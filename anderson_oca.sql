@@ -21,3 +21,24 @@ INSERT INTO `tabla2` (`id`, `valores`) VALUES
 (4, 'Cuatro'),
 (5, 'Cinco'),
 (6, 'Seis');
+
+
+/* 01: INNER JOIN */
+ SELECT * tabla1 a INNER JOIN IN tabla2 b on a.id = b.id;
+
+/* 02: LEFT OUTER JOIN */
+select * from tabla1 a LEFT OUTER JOIN tabla2 b on a.id = b.id;
+
+/* 03: RIGHT OUTER JOIN */
+select * from tabla1 a RIGHT OUTER JOIN tabla2 b on a.id = b.id;
+
+/* #04: FULL OUTER JOIN */
+select * from tabla1 FULL OUTER JOIN tabla2 on tabla1.id = tabla2.id;
+
+SELECT * FROM tabla1 a
+LEFT JOIN tabla2 b ON a.id = b.id
+UNION
+SELECT * FROM tabla1
+RIGHT JOIN tabla2 ON a.id = b.id
+
+
