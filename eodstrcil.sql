@@ -12,7 +12,7 @@ INSERT INTO `tabla1` (`id`, `letra`) VALUES
 (3, 'Tres'),
 (4, 'Cuatro');
 
-SELECT * FROM tabla1;
+SELECT letra FROM tabla1 WHERE letra = 'Dos';
 
 CREATE TABLE IF NOT EXISTS `tabla2` (
   `id` int(11) NOT NULL,
@@ -26,3 +26,17 @@ INSERT INTO `tabla2` (`id`, `valores`) VALUES
 (6, 'Seis');
 
 SELECT * FROM tabla2;
+
+/* 01: INNER JOIN */
+ SELECT * tabla1 a INNER JOIN IN tabla2 b on a.id = b.id;
+
+/* 02: LEFT OUTER JOIN */
+select * from tabla1 a LEFT OUTER JOIN tabla2 b on a.id = b.id;
+
+/* 03: RIGHT OUTER JOIN */
+select * from tabla1 a RIGHT OUTER JOIN tabla2 b on a.id = b.id;
+
+/* #04: FULL OUTER JOIN */
+select * from tabla1 FULL OUTER JOIN tabla2 on tabla1.id = tabla2.id; (PEEERO en mysql NO tenemos FULL OUTER join)
+
+/**/
